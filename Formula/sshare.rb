@@ -5,12 +5,12 @@
 class Sshare < Formula
   desc "Quickly share cURLable links to your SSH agent's keys!"
   homepage "https://github.com/willfantom/sshare"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
-    url "https://github.com/WillFantom/sshare/releases/download/v0.1.0/sshare_0.1.0_Darwin_all.tar.gz"
-    sha256 "1f1c645dc00c288270e701de06b48d5049a4c5222cd2d6456f516e7d2f47e863"
+    url "https://github.com/WillFantom/sshare/releases/download/v0.2.0/sshare_0.2.0_Darwin_all.tar.gz"
+    sha256 "dbcd162990c6a3c954542a7391bb88c6dd2559a235e19d66bda906b4638ae5cb"
 
     def install
       bin.install "sshare"
@@ -19,24 +19,24 @@ class Sshare < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/WillFantom/sshare/releases/download/v0.1.0/sshare_0.1.0_Linux_armv6.tar.gz"
-      sha256 "9020a9454b4b509914fb3825a91f433862e0af2eae3a12b17be5bb5c6dcd9553"
-
-      def install
-        bin.install "sshare"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WillFantom/sshare/releases/download/v0.1.0/sshare_0.1.0_Linux_arm64.tar.gz"
-      sha256 "f7cb9bf7e186e2132dd349355d38159ccd2e34cce2c011b09e33f39eb5e51a5f"
+      url "https://github.com/WillFantom/sshare/releases/download/v0.2.0/sshare_0.2.0_Linux_armv6.tar.gz"
+      sha256 "7c262e26efadcd1af60329f6d95f941392db9d1e92f33e9023c2689870ce0fce"
 
       def install
         bin.install "sshare"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/WillFantom/sshare/releases/download/v0.1.0/sshare_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "30c61f70b15e07d473620e97ed64388c06a05ebd06785b8e4568df7e8bd7b5ae"
+      url "https://github.com/WillFantom/sshare/releases/download/v0.2.0/sshare_0.2.0_Linux_x86_64.tar.gz"
+      sha256 "998b16871948a8533b305676a64c645836526d6cc6fbb78b8004c88b16b8b1b8"
+
+      def install
+        bin.install "sshare"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/WillFantom/sshare/releases/download/v0.2.0/sshare_0.2.0_Linux_arm64.tar.gz"
+      sha256 "58e307bf008e6a917b085677372b0f5331b5f7be5a673deb5bc97b378da552ff"
 
       def install
         bin.install "sshare"
