@@ -5,12 +5,12 @@
 class Sshare < Formula
   desc "Quickly share cURLable links to your SSH agent's keys!"
   homepage "https://github.com/willfantom/sshare"
-  version "1.1.5"
+  version "1.1.6"
   license "MIT"
 
   on_macos do
-    url "https://github.com/WillFantom/sshare/releases/download/v1.1.5/sshare_1.1.5_Darwin_all.tar.gz"
-    sha256 "0a44e541f4d3cfd2d6940c40051454d69a4d406aaa9d15811f513fc72a62522e"
+    url "https://github.com/WillFantom/sshare/releases/download/v1.1.6/sshare_1.1.6_darwin_all.tar.gz"
+    sha256 "cd082ac71754e8f3ec6a443fbe20020aa81c8172d335f9d82f2c7d76677f645e"
 
     def install
       bin.install "sshare"
@@ -19,24 +19,24 @@ class Sshare < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/WillFantom/sshare/releases/download/v1.1.5/sshare_1.1.5_Linux_armv6.tar.gz"
-      sha256 "aeea6d0cbf58dd61727a2bb0d5ef3a51f123cc67912f4ed04675b76c55ac2a8c"
+      url "https://github.com/WillFantom/sshare/releases/download/v1.1.6/sshare_1.1.6_linux_armv6.tar.gz"
+      sha256 "73dc4cf206de150df875ad92965a20d53864eab679f6ab3329d16a5bb9bcaa8c"
 
       def install
         bin.install "sshare"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/WillFantom/sshare/releases/download/v1.1.5/sshare_1.1.5_Linux_x86_64.tar.gz"
-      sha256 "a0a78c24fb5f0bb5db3adf1c98d25408055920d498ba44568f4329217bf0fd8a"
+      url "https://github.com/WillFantom/sshare/releases/download/v1.1.6/sshare_1.1.6_linux_amd64.tar.gz"
+      sha256 "bf58bad6cee56e13583922735110bc858b3a8bde0cf25a06166a123d23e2e8bd"
 
       def install
         bin.install "sshare"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WillFantom/sshare/releases/download/v1.1.5/sshare_1.1.5_Linux_arm64.tar.gz"
-      sha256 "8f3c3ed1df771da949c83a3f0b9c2202a48cf237b5ba79d3c45fb6d1c6f2e337"
+      url "https://github.com/WillFantom/sshare/releases/download/v1.1.6/sshare_1.1.6_linux_arm64.tar.gz"
+      sha256 "ba00b18c9adb6cdc9a268d7a76156d7401c5e3723bb2c7783de583eef5eb0ad1"
 
       def install
         bin.install "sshare"
